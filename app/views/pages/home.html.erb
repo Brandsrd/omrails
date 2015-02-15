@@ -1,14 +1,27 @@
+<% if user_signed_in? %>
+
+  <h1>You're logged in, in mijn eerste Ruby App!</h1>
+
+<% else %>
+
+
+
 <h1>Hallo, dit is mijn eerste Ruby App!</h1>
 
 <p>
 <%= link_to "ruben brands website", "http://www.rubenbrands.com" %>
 </p>
 
+<p>
+<%= link_to "Sign up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
+</p>
 
 <p>
 <a href="http://www.rubenbrands.com">mijn eigen website</a>
 
 </p>
+
+<% end %>
 
 
 
