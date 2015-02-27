@@ -6,4 +6,10 @@ class User < ActiveRecord::Base
 
   has_many :pins
 
+  after_create :send_welcome_email
+
+  def send_welcome_email
+    UserMailer.welcome(self).deliver
+  end
+
 end
